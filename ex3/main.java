@@ -13,13 +13,17 @@ public class main {
         BallScore.register(KonDoo1);
         BallScore.register(KonDoo2);
 
-        while (!(TempScore.isEmpty()))
+        while (true)
         {
-            System.out.print("Enter score : " + TempScore);
+            TempScore = " ";
+            System.out.print("\nEnter score :" + TempScore);
             TempScore = input.nextLine();
+            if (TempScore == "") break;
             BallScore.setScoreData(TempScore);
+            
         }
+        input.close(); 
+        System.out.print("It's time to sleep");
 
-        System.out.print("It's time to bed");
     }
 }
